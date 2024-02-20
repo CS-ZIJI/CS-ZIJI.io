@@ -23,7 +23,7 @@ theme:
     repo: fontawesome/brands/github-alt
     edit: material/pencil
     view: material/eye
-  # custom_dir: overrides # TODO: 请根据指导配置完 Giscus 后再取消注释：https://squidfunk.github.io/mkdocs-material/setup/adding-a-comment-system/
+  custom_dir: overrides
 
 markdown_extensions:
   - toc:
@@ -64,7 +64,7 @@ plugins:
   - search:
       separator: '[\s\-\.]+'
   - git-committers:
-      repository: CS-ZIJI/CS-ZIJI.github.io # TODO: 请修改本项配置，一般同步于 repo_name 即可（如果主分支不叫 main 也请修改 branch 项）
+      repository: CS-ZIJI/CS-ZIJI.github.io
       branch: main
   - statistics:
       words_per_minute: 200
@@ -88,8 +88,7 @@ extra_javascript:
 # ======================================== >>>
 
 nav:
-  - "Home": "https://cs-ziji.github.io/"
-  - "Index":
+  - "Home":
     - index.md
 
 # ======================================== <<<
