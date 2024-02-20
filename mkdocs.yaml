@@ -1,9 +1,9 @@
-site_name: CS-ZIJI-<课程名称> # TODO: 请修改项配置，将尖括号内的内容替换为课程名称
-repo_name: CS-ZIJI/F-MkDocs-Template # TODO: 请修改项配置，将其设置为对应的仓库
-repo_url: https://github.com/CS-ZIJI/F-MkDocs-Template # TODO: 请修改项配置，将其设置为对应的仓库的 URL，一般替换后缀即可
+site_name: CS-ZIJI-Home
+repo_name: CS-ZIJI/CS-ZIJI.github.io
+repo_url: https://github.com/CS-ZIJI/CS-ZIJI.github.io
 edit_uri: blob/main/docs
 
-copyright: 'Copyright &copy 2024 CS-ZIJI' # TODO: 请修改项配置，主要就是年份，对的就不用管
+copyright: 'Copyright &copy 2024 CS-ZIJI'
 
 theme:
   name: material
@@ -64,7 +64,7 @@ plugins:
   - search:
       separator: '[\s\-\.]+'
   - git-committers:
-      repository: CS-ZIJI/F-MkDocs-Template # TODO: 请修改本项配置，一般同步于 repo_name 即可（如果主分支不叫 main 也请修改 branch 项）
+      repository: CS-ZIJI/CS-ZIJI.github.io # TODO: 请修改本项配置，一般同步于 repo_name 即可（如果主分支不叫 main 也请修改 branch 项）
       branch: main
   - statistics:
       words_per_minute: 200
@@ -86,14 +86,11 @@ extra_javascript:
   - https://jsd.cdn.zzko.cn/npm/katex@0.16.4/dist/katex.min.js
 
 # ======================================== >>>
-# TODO: 请修改本项配置，本节是导航配置项，一般只需要在下面增加新的章节对应的文件即可，支持结构化配置
 
 nav:
   - "Home": "https://cs-ziji.github.io/"
-  - "Main":
+  - "Index":
     - index.md
-    - 0-x.md
-  # - "Appendix":
 
 # ======================================== <<<
 
