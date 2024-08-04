@@ -13,6 +13,7 @@ comments: false
 - [贡献指导](#贡献指导)
   - [标准工作流程](#标准工作流程)
     - [初始化](#初始化)
+    - [同步模板](#同步模板)
     - [后续维护指导](#后续维护指导)
     - [写作风格指导](#写作风格指导)
 
@@ -20,20 +21,29 @@ comments: false
 
 ### 初始化
 
-> [!IMPORTANT]
-> 初始化操作可联系常驻维护者代为设置，但如果你有兴趣自己设置也可以遵循如下步骤。
+!!! key-point "Important"
 
-目前 ZIJI 提供了 MkDocs 的快速设置模板 [F-MkDocs-Template](https://github.com/CS-ZIJI/F-MkDocs-Template){target="_blank"}，维护着可以选择基于本仓库进行内容编写，专注于内容编写而无需在意其它的配置内容。
+    初始化操作可联系常驻维护者代为设置，此页更多是作为流程备忘录设置；但如果你有兴趣自己设置也可以尝试自行遵循如下步骤。
+
+目前 ZIJI 提供了 MkDocs 的快速启动模板 [F-MkDocs-Template](https://github.com/CS-ZIJI/F-MkDocs-Template){target="_blank"}，维护者可以选择基于本仓库进行内容编写，专注于内容编写而无需在意其它的配置内容。
 
 使用该模板进行初始化，请遵循以下步骤：
 
-1. 克隆 [F-MkDocs-Template](https://github.com/CS-ZIJI/F-MkDocs-Template){target="_blank"} 作为 codebase，删除 `.git` 和 `.cache`，并以剩下的部分作为 first commit（即 **first commit 不要包含笔记内容**）
-2. 修改 `mkdocs.yaml` 来进行基础设置
+1. 克隆 [F-MkDocs-Template](https://github.com/CS-ZIJI/F-MkDocs-Template){target="_blank"} 作为 codebase
+    ```shell
+    git clone git@github.com:CS-ZIJI/F-MkDocs-Template.git <LocalRepoName>  # Replace <LocalRepoName>!
+    ```
+2. 运行 `scripts/init.sh` 完成初始化设置
+   ```shell
+    cd <LocalRepoName>  # Replace <LocalRepoName>!
+    ./scripts/init.sh  # Remove `.trash` folder if you want after running this.
+   ```
+3. 修改 `mkdocs.yaml` 来进行基础设置
     1. 检查所有 `#TODO` 注释，其中 `nav` 需要在文章内容更新过程中同步进行修改
     2. 具体每个配置项的含义，请参考注释
-3. 修改 `docs/index.md` 来填写课程信息，初始化内容
-4. 在组织中创建 repo，启动 GitHub Action、Pages 服务，并提交 commit，检查是否正常
-5. 修改 repo 的 About 项，填入 page URL
+4. 修改 `docs/index.md` 来填写课程信息，初始化内容
+5. 在组织中创建 repo，启动 GitHub Action、Pages 服务，并提交 commit，检查是否正常（此步骤可委托管理员进行）
+6. 修改 repo 的 About 项，填入 page URL
 
 特别的，对于仓库命名，我们做如下约定：
 
@@ -43,6 +53,16 @@ comments: false
     - T(tutorial): 笔记、教程类内容资源，例如数字逻辑设计课程笔记
     - F(functional): 功能类仓库，例如模板库
     - ...
+
+### 同步模板
+
+有时候我们会对 F-MkDocs-Template 做一些更新，各基于此仓库展开的仓库都应当适时同步这些更新。我们已经提供了自动化的脚本来实现比较基础的同步，您可以通过执行如下命令来进行同步：
+
+```shell
+./scripts/sync_base.sh
+```
+
+但众所周知，**版本合并是一个比较复杂的问题**，如果当前项目在此前进行了修改导致出现了合并冲突，那是很正常的。此时脚本会提示您手动解决冲突。完成之后，您需要从 `./scripts/sync_base.sh` 的 Step 6 开始手动完成剩下步骤。
 
 ### 后续维护指导
 
