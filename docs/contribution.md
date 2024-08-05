@@ -25,13 +25,13 @@ comments: false
 
     初始化操作可联系常驻维护者代为设置，此页更多是作为流程备忘录设置；但如果你有兴趣自己设置也可以尝试自行遵循如下步骤。
 
-目前 ZIJI 提供了 MkDocs 的快速启动模板 [F-MkDocs-Template](https://github.com/CS-ZIJI/F-MkDocs-Template){target="_blank"}，维护者可以选择基于本仓库进行内容编写，专注于内容编写而无需在意其它的配置内容。
+目前 ZIJI 提供了 MkDocs 的快速启动模板 [F-MkDocs-Template](https://github.com/ZIJI-CS/F-MkDocs-Template){target="_blank"}，维护者可以选择基于本仓库进行内容编写，专注于内容编写而无需在意其它的配置内容。
 
 使用该模板进行初始化，请遵循以下步骤：
 
-1. 克隆 [F-MkDocs-Template](https://github.com/CS-ZIJI/F-MkDocs-Template){target="_blank"} 作为 codebase
+1. 克隆 [F-MkDocs-Template](https://github.com/ZIJI-CS/F-MkDocs-Template){target="_blank"} 作为 codebase
     ```shell
-    git clone git@github.com:CS-ZIJI/F-MkDocs-Template.git <LocalRepoName>  # Replace <LocalRepoName>!
+    git clone git@github.com:ZIJI-CS/F-MkDocs-Template.git <LocalRepoName>  # Replace <LocalRepoName>!
     ```
 2. 运行 `scripts/init.sh` 完成初始化设置
    ```shell
