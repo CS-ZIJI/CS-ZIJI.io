@@ -8,6 +8,7 @@
 
 !!! section "课程"
 
+    - [数据结构基础](https://ziji-cs.github.io/T-FundamentalDataStructure)
     - [数字逻辑设计](https://ziji-cs.github.io/T-DigitalDesign)
     - [计算机组成](https://ziji-cs.github.io/T-ComputerOrganization)
     - [操作系统](https://ziji-cs.github.io/T-OperatingSystem)
